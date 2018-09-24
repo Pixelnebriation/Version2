@@ -416,6 +416,11 @@ to {opacity: 1}
     
     content: url("../img/logo-mobile.png");
 }
+
+#logo.logoscroll {
+  content: url("../img/logo-mobile.png");
+  
+}
 .col-6 {
   width: 100%;
 }
