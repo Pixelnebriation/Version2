@@ -9,11 +9,10 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background-image: url(../img/background.png);
+  background-repeat: no-repeat;
 }
 
-p {
-  color: #fff;
-}
+
 
 
 /* Navigation */
@@ -150,7 +149,7 @@ h1 {
 }
 
 #about {
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -163,9 +162,6 @@ h1 {
   color: #4e4f4f;
  
 }
-
-
-
 
 
 .col-6 {
@@ -274,6 +270,128 @@ to {opacity: 1}
 
 
 
+
+/* episode 3 section */
+
+#episode3 {
+  margin-top: 100px;
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: center;
+}
+
+.speakers-container, .agenda-container, .past-events-container {
+  width: 95%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-flow: wrap;
+  padding: 50px 0 50px 0;
+}
+
+
+.speakers {
+  position: relative;
+  width: 23%;
+  box-sizing: border-box;
+  overflow: hidden; 
+  text-align: center;
+  margin-bottom: 10px;
+  
+
+}
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+
+  }
+
+  .speakers:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  
+  }
+
+  .tagline {
+    font-style: italic;
+    font-size: 80%;
+  }
+
+  .text a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .text a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .agenda-container li {
+    margin-bottom: 10px;
+  }
+
+  /*past events */
+
+  #pastevents {
+    text-align: center;
+  }
+.event-box {
+  position: relative;
+  width: 30%;
+  box-sizing: border-box;
+  overflow: hidden; 
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.event-box:hover .overlay {
+  opacity: 1;
+}
+
+.event-text {
+  color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+
 /* footer */
 
 .footer {
@@ -285,6 +403,7 @@ to {opacity: 1}
   background: linear-gradient(to bottom, #45484d 20%,#373738 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#8f9296',GradientType=0 ); /* IE6-9 */
   align-content: center;
+  margin-top: 100px;
 }
 
 
@@ -408,10 +527,12 @@ to {opacity: 1}
     text-align: left;
     margin: 20px;
   }
+
+
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   #logo {
     
     content: url("../img/logo-mobile.png");
@@ -437,6 +558,22 @@ body {
   padding-top: 0px;
   
 }
+
+#episode3 {
+  margin: 50px;
+}
+
+.speakers {
+  width: 48%;
+}
+
+.event-box {
+  width: 90%;
+
+}
+
+
+
 }
 
 
@@ -489,8 +626,20 @@ body {
 }
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 480px){
   #checkpoint {
     content: url("../img/checkpoint-sm.png");
+  }
+
+  #about {
+    margin-top: 70px;
+  }
+
+  .speakers {
+    width: 90%;
+  }
+
+  .event-text {
+    font-size: 13px;
   }
 }
