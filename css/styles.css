@@ -48,7 +48,7 @@ nav ul li a {
   transition: all 0.2s ease;
 }
 nav ul li a:hover {
-  color: #34495E;
+  color: #c5c7c7;
 }
 a.active {
   border-bottom: 2px solid #ecf0f1;
@@ -108,6 +108,11 @@ h1 {
   height: 708px;
  /* background-image: url(../img/header-bg.png);*/
   text-align: center;
+}
+
+
+.content > p {
+  color: #fff;
 }
 
 .content {
@@ -627,6 +632,13 @@ body {
 
 
 @media screen and (max-width: 480px){
+  body {
+    background-image: url(../img/background-xs.png);
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
   #checkpoint {
     content: url("../img/checkpoint-sm.png");
   }
@@ -641,5 +653,16 @@ body {
 
   .event-text {
     font-size: 13px;
+  }
+
+  #pn {
+    content: url("../img/PN-sm.png");
+  }
+}
+
+
+@media screen and (max-width: 390px){
+  #checkpoint {
+    content: url("../img/checkpoint-xs.png");
   }
 }
